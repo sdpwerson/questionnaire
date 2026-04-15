@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Redirection...</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f5f5f5;
+    }
+    .box {
+      text-align: center;
+      background: white;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+    }
+    p { color: #555; }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h2>⏳ Redirection en cours...</h2>
+    <p>Vous allez être redirigé vers le questionnaire.</p>
+  </div>
+
+  <script>
+    const forms = [
+      "https://docs.google.com/forms/d/e/1FAIpQLSf9BphmxXFZETtT_CPnXs3G8maIfPo4Mo5zrESB6lsmxBlWDg/viewform?usp=dialog",
+      "https://docs.google.com/forms/d/e/1FAIpQLSeXWn0WF2cRlYZ4ad_KrL8xFGDts5dsz2khCBWBy1bg-1upKQ/viewform?usp=publish-editor",
+      "https://docs.google.com/forms/d/e/1FAIpQLScQRaKxbtSacDWJY3WJ8UcQkYAuSp7AiyP7bY6C9lWtK9IuIQ/viewform?usp=publish-editor",
+      "https://docs.google.com/forms/d/e/1FAIpQLSdF3RKZoLPgEXIWk5dMCjL1IHmhMwf6CvrtfXK-BJugS-Nyng/viewform?usp=publish-editor"
+    ];
+
+    const random = forms[Math.floor(Math.random() * forms.length)];
+    window.location.href = random;
+  </script>
+</body>
+</html>
